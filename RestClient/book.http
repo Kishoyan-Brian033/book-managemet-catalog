@@ -39,8 +39,17 @@ PATCH {{baseUrl}}/books/1
 Content-Type: application/json
 
 {
-  "publication_year": 2021
+  "publication_year": 2020
+}
+
+
+###update author
+PATCH {{baseUrl}}/books/1
+Content-Type: application/json
+
+{
+  "author": "james st.patric"
 }
 
 ###DELETE book
-DELETE {{baseUrl}}/books/3
+DELETE {{baseUrl}}/books
