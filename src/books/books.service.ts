@@ -23,7 +23,7 @@ export class BooksService {
   async create(createBookDto: CreateBookDto): Promise<Book> {
     try {
       const result = await this.databaseService.query(
-        'SELECT * FROM sp_create_book($1::varchar, $2::varchar, $3::integer, $4::varchar)',
+        'SELECT * FROM sp_create_book($1, $2, $3, $4)',
         [
           createBookDto.title,
           createBookDto.author,
@@ -84,7 +84,7 @@ export class BooksService {
   async deleteBook(id: number): Promise<Book> {
     try {
       const result = await this.databaseService.query(
-        `SELECT * FROM sp_delete_book($1::integer)`,
+        `SELECT * FROM sp_delete_book($1)`,
         [id],
       );
       if (result.rows.length === 0) {
@@ -103,7 +103,7 @@ export class BooksService {
   async findOneBook(id: number): Promise<Book> {
     try {
       const result = await this.databaseService.query(
-        `SELECT * FROM sp_get_books($1::integer)`,
+        `SELECT * FROM sp_get_books($1)`,
         [id],
       );
       if (result.rows.length === 0) {
@@ -119,12 +119,11 @@ export class BooksService {
     }
   }
 
-  // ...
 
   async updateBook(id: number, data: UpdateBookDto): Promise<Book> {
     try {
       const result = await this.databaseService.query(
-        `SELECT * FROM sp_update_book($1::integer, $2::varchar, $3::varchar, $4::integer, $5::varchar)`,
+        `SELECT * FROM sp_update_book($1, $2, $3, $4, $5)`,
         [id, data.title, data.author, data.publication_year, data.isbn],
       );
 

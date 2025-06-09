@@ -35,7 +35,7 @@ GET {{baseUrl}}/books/title/Tommy
 
 
 ### Update book with ID 
-PATCH {{baseUrl}}/books/3
+PATCH {{baseUrl}}/books/1
 Content-Type: application/json
 
 {
@@ -43,4 +43,4 @@ Content-Type: application/json
 }
 
 ###DELETE book
-DELETE {{baseUrl}}/books/1
+DELETE {{baseUrl}}/books/3
