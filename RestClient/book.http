@@ -1,0 +1,46 @@
+@baseUrl = http://localhost:3000
+
+### Create a new book
+POST {{baseUrl}}/books
+Content-Type: application/json
+
+{
+  "title": "Power Book II: Ghost",
+  "author": "Tariq",
+  "publication_year": 2020,
+  "isbn": "7676767676"
+  
+}
+
+### Get all books
+GET {{baseUrl}}/books
+
+
+### Create another book
+POST {{baseUrl}}/books
+Content-Type: application/json
+
+{
+  "title": "Power Book IV:Force",
+  "author": "Tommy",
+  "isbn": "999-873-3663",
+  "publication_year": 2024
+}
+
+### Search for books by author
+GET {{baseUrl}}/books/author/Tommy
+
+### Search for books with title
+GET {{baseUrl}}/books/title/Tommy
+
+
+### Update book with ID 
+PATCH {{baseUrl}}/books/3
+Content-Type: application/json
+
+{
+  "publication_year": 2021
+}
+
+###DELETE book
+DELETE {{baseUrl}}/books/1
