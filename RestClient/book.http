@@ -5,10 +5,10 @@ POST {{baseUrl}}/books
 Content-Type: application/json
 
 {
-  "title": "Power Book II: Ghost",
-  "author": "Tariq",
-  "publication_year": 2020,
-  "isbn": "7676767676"
+  "title": "Tomb Rider",
+  "author": "Lopez",
+  "publication_year": 2023,
+  "isbn": "565656647"
   
 }
 
@@ -39,7 +39,7 @@ PATCH {{baseUrl}}/books/1
 Content-Type: application/json
 
 {
-  "publication_year": 2020
+  "publication_year": 2021
 }
 
 
@@ -48,8 +48,8 @@ PATCH {{baseUrl}}/books/1
 Content-Type: application/json
 
 {
-  "author": "james st.patric"
+  "author": "Ghost"
 }
 
 ###DELETE book
-DELETE {{baseUrl}}/books
+DELETE {{baseUrl}}/books/4

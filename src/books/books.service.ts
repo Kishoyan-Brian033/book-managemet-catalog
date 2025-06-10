@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
@@ -87,6 +86,7 @@ export class BooksService {
         `SELECT * FROM sp_delete_book($1)`,
         [id],
       );
+    
       if (result.rows.length === 0) {
         throw new NotFoundException(`Book with ID ${id} not found`);
       }

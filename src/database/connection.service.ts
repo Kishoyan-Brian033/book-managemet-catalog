@@ -1,7 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable no-useless-catch */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+
 import { Injectable, OnModuleInit, OnModuleDestroy } from '@nestjs/common';
 import { Pool, PoolClient } from 'pg';
 import { createDatabasePool } from 'src/config/database.config';
@@ -25,7 +23,8 @@ export class DatabaseService implements OnModuleInit, OnModuleDestroy {
       const client = await this.Pool.connect();
       await client.query('SELECT 1');
       client.release();
-      console.log('Connected to database.......');
+      console.log('Connecting to database........ ');
+      console.log('Connected successfully');
     } catch (error) {
       console.log('Failed to connect to database', error);
       throw error;
