@@ -1,0 +1,18 @@
+### Create User
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Brian",
+  "email": "brian@gmail.com",
+  "password": "password123"
+}
+
+### Authenticate User (Login)
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "brian@gmail.com",
+  "password": "password123"
+}

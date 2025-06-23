@@ -13,7 +13,7 @@ import {
 import { Book } from './interfaces/books.interface';
 import { CreateBookDto } from './dtos/create-books.dto';
 import { UpdateBookDto } from './dtos/update-book.dto';
-import { DatabaseService } from 'src/database/connection.service';
+import { DatabaseService } from '../database/connection.service';
 
 @Injectable()
 export class BooksService {

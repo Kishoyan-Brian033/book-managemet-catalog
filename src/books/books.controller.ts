@@ -16,7 +16,7 @@ import {
 import { BooksService } from './books.service';
 import { CreateBookDto } from './dtos/create-books.dto';
 import { UpdateBookDto } from './dtos/update-book.dto';
-import { ApiResponse } from 'src/shared/interfaces/api-response/api-response.interface';
+import { ApiResponse } from '../shared/interfaces/api-response/api-response.interface';
 import { Book } from './interfaces/books.interface';
 
 @Controller('books')
