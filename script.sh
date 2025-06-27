@@ -17,6 +17,13 @@ psql -U postgres -h localhost -d book_catalog_db -f src/database/procedure/sp_up
 # Create stored procedures for users
 psql -U postgres -h localhost -d book_catalog_db -f src/database/procedure/sp_get_user_by_id.sql
 psql -U postgres -h localhost -d book_catalog_db -f src/database/procedure/sp_get_user_by_email.sql
+
+# Create stored procedures for notes
+psql -U postgres -h localhost -d book_catalog_db -f src/database/procedure/sp_create_note.sql
+psql -U postgres -h localhost -d book_catalog_db -f src/database/procedure/sp_get_notes.sql
+psql -U postgres -h localhost -d book_catalog_db -f src/database/procedure/sp_update_note.sql
+psql -U postgres -h localhost -d book_catalog_db -f src/database/procedure/sp_delete_note.sql
+
 echo "Database setup complete....."
 
 echo "You can now run : npm run start:dev"

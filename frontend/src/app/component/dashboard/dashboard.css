@@ -1,0 +1,159 @@
+.dashboard-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+.dashboard-container h2 {
+  color: #ea580c;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.add-card {
+  margin-bottom: 2rem;
+  padding: 1.2rem;
+  background: #f9fafb;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.notes-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+.card {
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid #f3f4f6;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.card:hover {
+  box-shadow: 0 6px 24px rgba(234,88,12,0.15);
+  transform: translateY(-2px) scale(1.01);
+}
+.square-card {
+  min-width: 200px;
+  min-height: 180px;
+  max-width: 260px;
+  justify-content: space-between;
+}
+.close-x {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: #fff !important;
+  border: none;
+  color: #222 !important;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  transition: color 0.2s, background 0.2s, transform 0.2s;
+}
+.close-x:hover {
+  background: #f3f4f6 !important;
+  color: #ea580c !important;
+  transform: scale(1.2);
+}
+.note-content {
+  flex: 1;
+  font-size: 1.15rem;
+  color: #3d3d3d;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  margin-top: 0.5rem;
+  word-break: break-word;
+}
+.note-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+.note-actions button {
+  background: #ea580c;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.2s;
+}
+.note-actions button:hover {
+  background: #c2410c;
+  transform: scale(1.05);
+}
+.dashboard-container input[type="text"],
+.dashboard-container input[type="password"],
+.dashboard-container input[type="email"] {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+.dashboard-container button {
+  background: #ea580c;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.2s;
+}
+.dashboard-container button:hover {
+  background: #c2410c;
+  transform: scale(1.04);
+}
+.note-textarea {
+  width: 100%;
+  min-height: 2.5rem;
+  max-height: 6rem;
+  resize: vertical;
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fafafa;
+  color: #222;
+  box-sizing: border-box;
+  margin-bottom: 0.5rem;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.note-textarea:focus {
+  /* No special focus styles */
+  border: 1px solid #ddd;
+  outline: none;
+  background: #fafafa;
+  box-shadow: none;
+}
+.logout-btn {
+  background: #ea580c;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  margin-left: 1rem;
+}
+.logout-btn:hover {
+  background: #c2410c;
+  color: #fff;
+  transform: scale(1.04);
+}
+
